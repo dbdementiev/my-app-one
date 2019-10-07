@@ -1,0 +1,31 @@
+table.metrics {
+    width: 95%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black; 
+    border-collapse: collapse;
+
+    tr, div {
+        width: 100%;
+    }
+
+    td {
+        border: 1px solid black;
+    }
+
+    td.theader {
+        text-align: center;
+        font-weight: bold;
+        background-color: bisque;
+    }
+
+    td.mname {
+        text-align: left;
+        font-size: 90%;
+    }
+
+    td.mvalue {
+        text-align: right;
+        font-weight: bolder;
+    }
+}

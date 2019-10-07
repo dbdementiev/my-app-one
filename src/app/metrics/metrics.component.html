@@ -1,0 +1,37 @@
+<p>Prometheus Metrics from targets</p>
+
+<ul *ngIf="metrics; noMetricsBlock" class="metrics">
+    <li *ngFor="let metric of metrics">
+        {{metric.name}} ({{metric.type}})
+        <div>
+            <table class="metrics">
+                <tr>
+                    <td colspan="2" class="theader">{{metric.description}}</td>
+                </tr>
+                <tr *ngFor="let value of metric.values">
+                    <td class="mname">{{value.name}}</td> <td class="mvalue">{{value.value}}</td>
+                </tr>
+            </table>
+        </div>
+    </li>
+</ul>
+<ng-template #noMetricsBlock>
+    <li>No metrics yet loaded</li>
+</ng-template>
+
+<!--
+
+<table *ngIf="metrics; noMetricsBlock" class="metrics">
+    <div *ngFor="let metric of metrics">
+        <tr>
+            <td colspan="2" class="theader">{{metric.description}}</td>
+        </tr>
+        <tr *ngFor="let value of metric.values">
+            <td class="mname">{{value.name}}</td> <td class="mvalue">{{value.value}}</td>
+        </tr>
+    </div>
+</table>
+<ng-template #noMetricsBlock>
+    <tr><td>No metrics yet loaded</td></tr>
+</ng-template>
+-->

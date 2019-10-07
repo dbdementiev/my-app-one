@@ -1,0 +1,17 @@
+<header>
+    <div class="container">
+        <a href="#" class="logo">CoolApp</a>
+        <nav>
+            <ul>
+                <li><a href="#" routerLink="/">Home</a></li>
+                <li><a href="#" routerLink="/list">Servers</a></li>
+                <li><a href="#" routerLink="/metrics">Metrics</a></li>
+                <li><a [href]="grafanaDashboardUrl" target="_blank">Dashboard</a> </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

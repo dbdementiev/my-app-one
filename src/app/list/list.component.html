@@ -1,0 +1,20 @@
+<h1>Prometheus targets</h1>
+
+<table *ngIf="servers; noServersBlock">
+    <tr *ngFor="let server of servers">
+        <td><a class="site" href="http://{{server}}/metrics" target="_blank">{{server}}</a></td>
+    </tr>
+</table>
+<ng-template #noServersBlock>
+    <tr><td>No registred targets found</td></tr>
+</ng-template>
+
+<!--
+    <ul *ngIf="brews">
+        <li *ngFor="let brew of brews">
+            <p class="name">{{brew.name}}</p>
+            <p class="country">{{brew.country}}</p>
+            <a class="site" href="{{brew.website_url}}">site</a>
+        </li>
+    </ul>
+-->

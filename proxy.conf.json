@@ -1,0 +1,14 @@
+{
+    "/server": {
+        "target": "http://ddementiev0d1:8880",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    },
+    "/metrics": {
+        "target": "http://ddementiev0d1:8880",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}
